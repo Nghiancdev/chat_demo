@@ -48,11 +48,17 @@
       :user_role="form.user_role"
       :email="form.email"
     ></ChatPopup>
+    <SyncUser
+      :customer_id="form.customer_id"
+      :full_name="form.full_name"
+      :user_role="form.user_role"
+      :email="form.email"
+    ></SyncUser>
   </div>
 </template>
 
 <script>
-import { ChatPopup } from "ikigroup-chat";
+import { ChatPopup, SyncUser } from "ikigroup-chat";
 import "ikigroup-chat/dist/MyLibrary.css";
 import { initializeSocket, getAuthCode } from "ikigroup-chat";
 
@@ -60,6 +66,7 @@ export default {
   name: "App",
   components: {
     ChatPopup,
+    SyncUser,
   },
   data() {
     return {
