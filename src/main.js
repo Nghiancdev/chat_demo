@@ -1,12 +1,12 @@
 import Vue from "vue";
 import App from "./App.vue";
-import { initializeSocket, getAuthCode } from "ikigroup-chat";
+// import { initializeSocket, getAuthCode } from "ikigroup-chat";
 
-const userString = getAuthCode();
+// const userString = getAuthCode();
 
-if (userString) {
-  initializeSocket(userString);
-}
+// if (userString) {
+//   initializeSocket(userString);
+// }
 Vue.config.productionTip = false;
 
 new Vue({
