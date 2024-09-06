@@ -49,6 +49,7 @@
       :email="form.email"
     ></ChatPopup>
     <SyncUser
+      v-if="submitted"
       :customer_id="form.customer_id"
       :full_name="form.full_name"
       :user_role="form.user_role"
