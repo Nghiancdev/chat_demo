@@ -40,20 +40,22 @@
       <button type="submit" class="submit-button">Submit</button>
     </form>
 
+    <!-- Chỉ hiển thị khi submitted và truyền dữ liệu từ submittedData -->
     <ChatPopup
       v-if="submitted"
       :key="componentKey"
-      :customer_id="form.customer_id"
-      :full_name="form.full_name"
-      :user_role="form.user_role"
-      :email="form.email"
+      :customer_id="submittedData.customer_id"
+      :full_name="submittedData.full_name"
+      :user_role="submittedData.user_role"
+      :email="submittedData.email"
     ></ChatPopup>
+
     <SyncUser
       v-if="submitted"
-      :customer_id="form.customer_id"
-      :full_name="form.full_name"
-      :user_role="form.user_role"
-      :email="form.email"
+      :customer_id="submittedData.customer_id"
+      :full_name="submittedData.full_name"
+      :user_role="submittedData.user_role"
+      :email="submittedData.email"
     ></SyncUser>
   </div>
 </template>
@@ -79,12 +81,20 @@ export default {
       },
       submitted: false,
       componentKey: 0,
+      submittedData: {
+        customer_id: "",
+        full_name: "",
+        user_role: "",
+        email: "",
+      },
     };
   },
   methods: {
     submitForm() {
+      // Sao chép dữ liệu form vào submittedData
+      this.submittedData = { ...this.form };
       this.submitted = true;
-      console.log("Form submitted", this.form);
+      console.log("Form submitted", this.submittedData);
 
       setTimeout(() => {
         this.componentKey += 1;
