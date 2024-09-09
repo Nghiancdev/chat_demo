@@ -20,6 +20,15 @@
         />
       </div>
       <div class="form-group">
+        <label for="avatar">Avatar:</label>
+        <input
+          type="text"
+          id="avatar"
+          v-model="form.avatar"
+          placeholder="Enter avatar url"
+        />
+      </div>
+      <div class="form-group">
         <label for="user_role">User Role:</label>
         <input
           type="text"
@@ -41,14 +50,7 @@
     </form>
 
     <!-- Chỉ hiển thị khi submitted và truyền dữ liệu từ submittedData -->
-    <ChatPopup
-      v-if="submitted"
-      :key="componentKey"
-      :customer_id="submittedData.customer_id"
-      :full_name="submittedData.full_name"
-      :user_role="submittedData.user_role"
-      :email="submittedData.email"
-    ></ChatPopup>
+    <ChatPopup v-if="submitted" :key="componentKey"></ChatPopup>
 
     <SyncUser
       v-if="submitted"
@@ -56,6 +58,7 @@
       :full_name="submittedData.full_name"
       :user_role="submittedData.user_role"
       :email="submittedData.email"
+      :user_avatar="submittedData.avatar"
     ></SyncUser>
   </div>
 </template>
@@ -76,6 +79,7 @@ export default {
       form: {
         customer_id: "",
         full_name: "",
+        avatar: "",
         user_role: "",
         email: "",
       },
@@ -84,6 +88,7 @@ export default {
       submittedData: {
         customer_id: "",
         full_name: "",
+        avatar: "",
         user_role: "",
         email: "",
       },
