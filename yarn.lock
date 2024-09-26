@@ -4059,10 +4059,10 @@ ikigroup-chat@^0.6.1:
     vuex "^3.4.0"
     vuex-persisted "^0.0.1"
 
-ikigroup-chat@^0.7.9:
-  version "0.7.9"
-  resolved "https://registry.yarnpkg.com/ikigroup-chat/-/ikigroup-chat-0.7.9.tgz#85b34e0190835a0d17af5cc7eb44694af42c2b1b"
-  integrity sha512-QxEbzRvpqUGk8vvo9CMkB3wdnOmxSJUGgCEBHyZ3k2LBVhbhsxTkbQly+L+9NuDDISrMxviqS5QNe7Vlh8XBAQ==
+ikigroup-chat@^0.8.9:
+  version "0.8.9"
+  resolved "https://registry.yarnpkg.com/ikigroup-chat/-/ikigroup-chat-0.8.9.tgz#576ca059b58aebe7d0eccfcdd66a6bc6578588a2"
+  integrity sha512-G07orvfVso+Z0HvbMOCTblp2Dqo55P0NVaJYY/RgOFCrw85AXy7LNrLd4Xhi4I6s0D7xQb0wrf6KsA3a78aqIw==
   dependencies:
     "@lottiefiles/lottie-player" "^1.5.7"
     "@vue/tsconfig" "^0.1.3"
